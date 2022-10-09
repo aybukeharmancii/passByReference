@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'passByReference'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=passByReference",
+                    "--package=passByReference"
+                ],
+                "filter": {
+                    "name": "passByReference",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'passByReference'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=passByReference",
+                    "--package=passByReference"
+                ],
+                "filter": {
+                    "name": "passByReference",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
